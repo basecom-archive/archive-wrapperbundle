@@ -7,16 +7,6 @@ use \Symfony\Component\DependencyInjection\ContainerInterface;
 abstract class ContainerAwareCommand extends \Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand
 {
 	/**
-	 * Class constructor
-	 * 
-	 * @param \Symfony\Component\DependencyInjection\ContainerInterface $container
-	 */
-	public function __construct(ContainerInterface $container)
-	{
-		$this->setContainer($container);
-	}
-
-	/**
 	 * Container->get() shortcut
 	 * 
 	 * @param string $id
