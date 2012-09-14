@@ -2,10 +2,9 @@
 
 namespace basecom\WrapperBundle\ContainerAware;
 
-use \Symfony\Component\DependencyInjection\ContainerAware;
 use \Symfony\Component\DependencyInjection\ContainerInterface;
 
-abstract class ContainerAware extends ContainerAware
+abstract class ContainerAware extends \Symfony\Component\DependencyInjection\ContainerAware
 {
 	/**
 	 * Class constructor
