@@ -1,6 +1,10 @@
 basecom/WrapperBundle
 =====================
 
+
+	License informations: [LGPL](https://raw.github.com/basecom/WrapperBundle/master/LICENSE)
+
+
 This bundle provides some shortcuts to default services/methods of a container:
 * getDoctrine(...)
 * getEntityManager(...)
