@@ -1,11 +1,23 @@
 {
     "name": "basecom/wrapper-bundle",
-    "description": "Adds some default wrapper for container and commands",
+    "description": "Adds some default shortcuts for container and commands",
+	"keywords": ["wrapper", "container"],
+	"minimum-stability": "dev",
+	"homepage": "https://github.com/basecom/WrapperBundle",
+	"type": "bundle",
+	"license": "LGPL",
+	"authors": [
+        {
+            "name": "Simon Schröer",
+            "email": "schroeer@basecom.de",
+            "homepage": "http://www.basecom.de/"
+        }
+    ],
+	"require": {
+        "symfony/symfony": "2.1.*"
+    },
     "autoload": {
         "psr-0": { "basecom\\WrapperBundle": "" }
     },
-    "target-dir": "basecom/WrapperBundle",
-    "require": {
-        "symfony/symfony": "2.1.*"
-    }
+	"target-dir": "basecom/WrapperBundle"
 }
