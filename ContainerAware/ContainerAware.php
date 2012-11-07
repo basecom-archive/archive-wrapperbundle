@@ -11,7 +11,7 @@ abstract class ContainerAware extends \Symfony\Component\DependencyInjection\Con
 	 * 
 	 * @param \Symfony\Component\DependencyInjection\ContainerInterface $container
 	 */
-	public function __construct(ContainerInterface $container)
+	public function __construct(ContainerInterface $container = null)
 	{
 		$this->setContainer($container);
 	}
