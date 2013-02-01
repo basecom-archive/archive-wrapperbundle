@@ -18,7 +18,7 @@ abstract class ContainerAwareCommand extends \Symfony\Bundle\FrameworkBundle\Com
 		if(null === $invalidBehavior) {
 			$invalidBehavior = ContainerInterface::EXCEPTION_ON_INVALID_REFERENCE;
 		}
-		return $this->getContainer()->get($id, $invalidBehavior);
+		return $this->getApplication()->getKernel()->getContainer()->get($id, $invalidBehavior);
 	}
 
 	/**
@@ -39,7 +39,7 @@ abstract class ContainerAwareCommand extends \Symfony\Bundle\FrameworkBundle\Com
 	 */
 	protected function getEntityManager($name = null)
 	{
-		return $this->getDoctrine()->getEntityManager($name);
+		return $this->getDoctrine()->getManager($name);
 	}
 
 	/**
