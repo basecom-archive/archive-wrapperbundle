@@ -59,7 +59,7 @@ abstract class ContainerAware extends \Symfony\Component\DependencyInjection\Con
 	 */
 	protected function getEntityManager($name = null)
 	{
-		return $this->getDoctrine()->getEntityManager($name);
+		return $this->getDoctrine()->getManager($name);
 	}
 
 	/**
