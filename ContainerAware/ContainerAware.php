@@ -51,16 +51,16 @@ abstract class ContainerAware extends \Symfony\Component\DependencyInjection\Con
 		return $this->get('doctrine');
 	}
 
-	/**
-	 * Returns the entity manager
-	 * 
-	 * @param type $name
-	 * @return \Doctrine\ORM\EntityManager
-	 */
-	protected function getEntityManager($name = null)
-	{
-		return $this->getDoctrine()->getManager($name);
-	}
+    /**
+     * Returns the entity manager
+     *
+     * @param type $name
+     * @return \Doctrine\ORM\EntityManager
+     */
+    protected function getManager($name = null)
+    {
+        return $this->getDoctrine()->getManager($name);
+    }
 
 	/**
 	 * Returns a repository
@@ -71,6 +71,6 @@ abstract class ContainerAware extends \Symfony\Component\DependencyInjection\Con
 	 */
 	protected function getRepository($repositoryName, $entityManagerName = null)
 	{
-		return $this->getEntityManager($entityManagerName)->getRepository($repositoryName);
+		return $this->getManager($entityManagerName)->getRepository($repositoryName);
 	}
 }

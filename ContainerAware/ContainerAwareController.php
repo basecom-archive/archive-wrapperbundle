@@ -10,7 +10,7 @@ class ContainerAwareController extends \Symfony\Bundle\FrameworkBundle\Controlle
 	 * @param type $name
 	 * @return \Doctrine\ORM\EntityManager
 	 */
-	protected function getEntityManager($name = null)
+	protected function getManager($name = null)
 	{
 		return $this->getDoctrine()->getManager($name);
 	}
@@ -24,6 +24,6 @@ class ContainerAwareController extends \Symfony\Bundle\FrameworkBundle\Controlle
 	 */
 	protected function getRepository($repositoryName, $entityManagerName = null)
 	{
-		return $this->getEntityManager($entityManagerName)->getRepository($repositoryName);
+		return $this->getManager($entityManagerName)->getRepository($repositoryName);
 	}
 }
