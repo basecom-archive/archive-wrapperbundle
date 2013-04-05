@@ -6,7 +6,7 @@ License informations: [LGPL](https://raw.github.com/basecom/WrapperBundle/master
 
 This bundle provides some shortcuts to default services/methods of a container:
 * getDoctrine(...)
-* getEntityManager(...)
+* getManager(...)
 * getContainer()
 * setContainer(...)
 * get(...)
