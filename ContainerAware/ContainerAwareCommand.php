@@ -2,6 +2,7 @@
 
 namespace basecom\WrapperBundle\ContainerAware;
 
+use Doctrine\ORM\EntityManager;
 use \Symfony\Component\DependencyInjection\ContainerInterface;
 
 abstract class ContainerAwareCommand extends \Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand
@@ -34,12 +35,21 @@ abstract class ContainerAwareCommand extends \Symfony\Bundle\FrameworkBundle\Com
     /**
      * Returns the entity manager
      *
-     * @param type $name
+     * @param string|null $name
      * @return \Doctrine\ORM\EntityManager
      */
     protected function getManager($name = null)
     {
         return $this->getDoctrine()->getManager($name);
+    }
+
+    /**
+     * @param string|null $name
+     * @return EntityManager
+     */
+    protected function getEntityManager($name = null)
+    {
+        return $this->getManager($name);
     }
 
     /**

@@ -2,18 +2,29 @@
 
 namespace basecom\WrapperBundle\ContainerAware;
 
+use Doctrine\ORM\EntityManager;
+
 class ContainerAwareController extends \Symfony\Bundle\FrameworkBundle\Controller\Controller
 {
 	/**
 	 * Returns the entity manager
 	 * 
-	 * @param type $name
+	 * @param string|null $name
 	 * @return \Doctrine\ORM\EntityManager
 	 */
 	protected function getManager($name = null)
 	{
 		return $this->getDoctrine()->getManager($name);
 	}
+
+    /**
+     * @param string|null $name
+     * @return EntityManager
+     */
+    protected function getEntityManager($name = null)
+    {
+        return $this->getManager($name);
+    }
 
 	/**
 	 * Returns a repository
